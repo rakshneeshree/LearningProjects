@@ -6,6 +6,7 @@ import com.pravyuha.utilities.JsonProcessor;
 import org.apache.poi.ss.usermodel.Row;
 
 import java.io.IOException;
+import java.util.*;
 
 
 
@@ -25,8 +26,10 @@ public class Main {
         obj1.removeSheet(path,2);
 
 
+       // JavaObjects obj3 =new JavaObjects();
 
         JsonProcessor obj2 = new JsonProcessor();
+        Scanner scanner=new Scanner(System.in);
 
         String jsonpath = "C:\\Users\\Rakshneeshree. B\\Downloads\\StudentJson.json";
 
@@ -46,6 +49,13 @@ public class Main {
             String outpath = "C:\\Users\\Rakshneeshree. B\\Downloads\\Jsonoutput.json";
 
             obj2.writeJson(outpath, node); System.out.println("Project successfully done");
+
+            String s = scanner.nextLine();
+
+            String newpath1="C:\\Users\\Rakshneeshree. B\\Downloads\\Stringnew.json";
+            obj2.createNewJson(newpath,s);
+
+
 
         }
         catch(IOException e){
