@@ -3,6 +3,7 @@ package com.pravyuha.learn;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.pravyuha.utilities.ExcelProcessor;
 import com.pravyuha.utilities.JsonProcessor;
+import com.pravyuha.utilities.RecurrsiveFunction;
 import org.apache.poi.ss.usermodel.Row;
 
 import java.io.IOException;
@@ -63,6 +64,11 @@ public class Main {
         }
 
 
+        //Recurrsive Function
+
+        int n=scanner.nextInt();
+        int series = RecurrsiveFunction.fibonacci(n);
+        System.out.println(series);
 
 
     }
